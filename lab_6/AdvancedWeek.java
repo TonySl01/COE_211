@@ -19,7 +19,7 @@ public class AdvancedWeek {
 
     // printing out the days
     public void printDays() {
-        System.out.println( /* Insert string to be printed out */"The advanced days of the week are: \n " +
+        System.out.println( /* Insert string to be printed out */"The advanced days of the week are: \n" +
         day_1_index + ": " + day_1 + ",\n" +
         day_2_index + ": " + day_2 + ",\n" +
         day_3_index + ": " + day_3 + ",\n" +

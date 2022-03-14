@@ -28,7 +28,7 @@ public class Employee {
 
     public String toString() {
         // insert logic for toString method
-        String info = "Employee information:" +firstName +" " + lastName  +", " + age +", " + salary ;
+        String info = "Employee information: " +firstName +" " + lastName  +", " + age +", " + salary ;
         return info ;
     }
 }

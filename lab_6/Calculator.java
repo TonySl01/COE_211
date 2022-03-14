@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Calculator {
-    private int a;
-    private int b;
+    private int num1;
+    private int num2;
     private String operator;
 
     // Constructor to initialize the calculator
@@ -13,42 +13,47 @@ public class Calculator {
          * Continue code here to ask for the first number, the operator, and the second number, IN THAT ORDER
          */
         System.out.print("Input the first number: ");
-        a = scanCalc.nextInt();
-        System.out.print("Input the operator: ");
-    operator= scanCalc.nextLine(); 
-    scanCalc.nextLine();
+      num1= scanCalc.nextInt();
+      scanCalc.nextLine();
+          System.out.print("Input the operator: ");
+     operator= scanCalc.nextLine(); 
+     
+  
         System.out.print("Input the second number: ");
-        b = scanCalc.nextInt();
+        num2 = scanCalc.nextInt();
+        
         // Decide on the operation to perform 
         /**
          * Insert code to decide on which function to call, based on the operator the user chose
          * Hint: Switch statement
          */
-        operator= "+" ;
+       
         switch (operator) {
-            case "+":
-            System.out.println(add(a, b)) ;
+            case "+": System.out.println(add(num1,num2)) ;
+              break;
+              
+            case "x": System.out.println( multiply(num1, num2));
             
                 break;
-            case "x":
-            multiply(a, b);
+                case "*": System.out.println( multiply(num1, num2));
+            
                 break;
-                case "-":
-            subtract(a, b);
+            case "-":    System.out.println( subtract(num1, num2));
+            
             break;
-            case "/":
-          divide(a, b);
+            case "/": System.out.println( divide(num1, num2));
+           break;
        
-            break;
-            default:
-        }
+             }
+        
+       
     }
 
     public String add(int a, int b) {
         /**
          * Enter logic
          */
-       String added= a + "+" +b +"=" +(a+b) ;
+       String added= a + " + " +b +" = " +(a+b) ;
         return added;
     }
 
@@ -56,20 +61,22 @@ public class Calculator {
         /**
          * Enter logic
          */
-        return a + "-" +b +"=" +(a-b) ;
+        String subt= a + " - " +b +" = " +(a-b) ;
+        return subt;
     }
 
     public String multiply(int a, int b) {
         /**
          * Enter logic
          */
-        return a + "x" +b +"=" +(a*b) ;
+        return a + " x " +b +" = " +(a*b) ;
     }
 
     public String divide(int a, int b) {
         /**
          * Enter logic
          */
-        return a + "/" +b +"=" +(a/b) ;
+        return a + " / " +b +" = " +(a/b) ;
     }
+    
 }
